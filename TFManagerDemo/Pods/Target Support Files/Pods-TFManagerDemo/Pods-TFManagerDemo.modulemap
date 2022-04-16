@@ -1,0 +1,6 @@
+module Pods_TFManagerDemo {
+  umbrella header "Pods-TFManagerDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
