@@ -9,9 +9,14 @@
 /* Begin PBXBuildFile section */
 		2E4E1BC0FA2B16A54BE9892CD00B0189 /* Pods-TFManagerDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62B4016E95F19040951C337E29B0CD /* Pods-TFManagerDemo-dummy.m */; };
 		3BE6A74A55EED856490FC04B3EBE7D79 /* TFManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 783144D7FF8526824A8F0C0344187A30 /* TFManager-dummy.m */; };
-		5F8D1A039B2DE97FAE0C057FCBDA55E2 /* TFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C395D5E2BFE51FF8270FEE3FE3F6FA /* TFManager.swift */; };
 		99A0010E1EA47E10C4BA60B276858626 /* Pods-TFManagerDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BAB75F19DDF145D3916826DD31904B2F /* Pods-TFManagerDemo-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F728198398EE72E7D208D7EBC52D453B /* TFManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BB1782F0FD82901074E3C0BC896AB07 /* TFManager-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FEED888A280C1A13003CC779 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED8886280C1A13003CC779 /* Rules.swift */; };
+		FEED888D280C1A13003CC779 /* ValidatableField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED8889280C1A13003CC779 /* ValidatableField.swift */; };
+		FEED8893280C42A8003CC779 /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED8892280C42A8003CC779 /* ValidationResult.swift */; };
+		FEED889A280C651D003CC779 /* RulesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED8898280C651D003CC779 /* RulesRepo.swift */; };
+		FEED889B280C651D003CC779 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED8899280C651D003CC779 /* Validatable.swift */; };
+		FEED889D280C6A94003CC779 /* TFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED889C280C6A94003CC779 /* TFManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,26 +30,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B23AD29F011DD9A864681BCC078692D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		0B23AD29F011DD9A864681BCC078692D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1A86B28083A75235F332EEDA3E152644 /* TFManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TFManager-prefix.pch"; sourceTree = "<group>"; };
-		238CF0E6F5C6A27680C5414BD4BD3DBC /* LICENSE.md */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.md; sourceTree = "<group>"; };
+		238CF0E6F5C6A27680C5414BD4BD3DBC /* LICENSE.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		23C082F039C9DFE23D7681F4DDE0E01B /* TFManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TFManager.release.xcconfig; sourceTree = "<group>"; };
 		2F1BF0EEE5A38CDDD4780F8CA0A417B7 /* Pods-TFManagerDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TFManagerDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		4BB1782F0FD82901074E3C0BC896AB07 /* TFManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TFManager-umbrella.h"; sourceTree = "<group>"; };
-		71C395D5E2BFE51FF8270FEE3FE3F6FA /* TFManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TFManager.swift; path = Sources/TFManager/TFManager.swift; sourceTree = "<group>"; };
 		783144D7FF8526824A8F0C0344187A30 /* TFManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TFManager-dummy.m"; sourceTree = "<group>"; };
 		8935851A1BBEBA808373A73581C8982C /* Pods-TFManagerDemo */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-TFManagerDemo"; path = "libPods-TFManagerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E1B2F49A7163041CA9EE1D4861697A7 /* TFManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TFManager.modulemap; sourceTree = "<group>"; };
 		A462A73D57E94F85C299E1066173F374 /* Pods-TFManagerDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TFManagerDemo.modulemap"; sourceTree = "<group>"; };
 		B9514A8AF6538723F3C370A67FBD05D3 /* Pods-TFManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BAB75F19DDF145D3916826DD31904B2F /* Pods-TFManagerDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TFManagerDemo-umbrella.h"; sourceTree = "<group>"; };
 		BAC1E02C753EF0BF3EFAEBBCB8BA2B90 /* TFManager */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = TFManager; path = libTFManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB344007B48900F883DB2A88EA751FE2 /* TFManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TFManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB344007B48900F883DB2A88EA751FE2 /* TFManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TFManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DB62B4016E95F19040951C337E29B0CD /* Pods-TFManagerDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TFManagerDemo-dummy.m"; sourceTree = "<group>"; };
 		EA0E5F5FE9090A11B99650864B7B5826 /* TFManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TFManager.debug.xcconfig; sourceTree = "<group>"; };
 		F04B090EC8CD990ECF6998F6EBFAE897 /* Pods-TFManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F9D7432D264BD371F5E6DC5DD81A061C /* Pods-TFManagerDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TFManagerDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FEED8886280C1A13003CC779 /* Rules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rules.swift; path = Sources/TFManager/Rules.swift; sourceTree = "<group>"; };
+		FEED8889280C1A13003CC779 /* ValidatableField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValidatableField.swift; path = Sources/TFManager/ValidatableField.swift; sourceTree = "<group>"; };
+		FEED8892280C42A8003CC779 /* ValidationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValidationResult.swift; path = Sources/TFManager/ValidationResult.swift; sourceTree = "<group>"; };
+		FEED8898280C651D003CC779 /* RulesRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RulesRepo.swift; path = Sources/TFManager/RulesRepo.swift; sourceTree = "<group>"; };
+		FEED8899280C651D003CC779 /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Validatable.swift; path = Sources/TFManager/Validatable.swift; sourceTree = "<group>"; };
+		FEED889C280C6A94003CC779 /* TFManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFManager.swift; path = Sources/TFManager/TFManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +78,12 @@
 		124D8A1E5CA26A4FC17963685B4A959B /* TFManager */ = {
 			isa = PBXGroup;
 			children = (
-				71C395D5E2BFE51FF8270FEE3FE3F6FA /* TFManager.swift */,
+				FEED8889280C1A13003CC779 /* ValidatableField.swift */,
+				FEED8886280C1A13003CC779 /* Rules.swift */,
+				FEED8898280C651D003CC779 /* RulesRepo.swift */,
+				FEED8899280C651D003CC779 /* Validatable.swift */,
+				FEED8892280C42A8003CC779 /* ValidationResult.swift */,
+				FEED889C280C6A94003CC779 /* TFManager.swift */,
 				20D4CA4A69957CBEECA7A0C8A311B69B /* Pod */,
 				85375CAA6D558A5246C4E25201021A44 /* Support Files */,
 			);
@@ -276,8 +291,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F8D1A039B2DE97FAE0C057FCBDA55E2 /* TFManager.swift in Sources */,
+				FEED888A280C1A13003CC779 /* Rules.swift in Sources */,
+				FEED888D280C1A13003CC779 /* ValidatableField.swift in Sources */,
+				FEED8893280C42A8003CC779 /* ValidationResult.swift in Sources */,
+				FEED889A280C651D003CC779 /* RulesRepo.swift in Sources */,
+				FEED889B280C651D003CC779 /* Validatable.swift in Sources */,
 				3BE6A74A55EED856490FC04B3EBE7D79 /* TFManager-dummy.m in Sources */,
+				FEED889D280C6A94003CC779 /* TFManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
