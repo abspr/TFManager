@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="knh-5X-Ize">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Demo-->
+        <scene sceneID="FfY-aw-Nhu">
+            <objects>
+                <tableViewController id="Fc1-4O-EwG" customClass="ViewController" customModule="TFManagerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="KAt-yl-bPx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="Qmv-fK-BLQ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7ef-nd-Ada">
+                                        <rect key="frame" x="20" y="18" width="374" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7ef-nd-Ada" id="CX6-nl-P0a">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nlt-Mj-STy">
+                                                    <rect key="frame" x="20" y="16" width="334" height="19"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nlt-Mj-STy" secondAttribute="trailing" id="06x-xg-cC3"/>
+                                                <constraint firstItem="nlt-Mj-STy" firstAttribute="top" secondItem="CX6-nl-P0a" secondAttribute="top" constant="16" id="MTn-p5-drB"/>
+                                                <constraint firstAttribute="bottom" secondItem="nlt-Mj-STy" secondAttribute="bottom" constant="16" id="NRh-Ic-Fts"/>
+                                                <constraint firstItem="nlt-Mj-STy" firstAttribute="leading" secondItem="CX6-nl-P0a" secondAttribute="leadingMargin" id="lfA-Zx-wxK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="enF-DR-RVV">
+                                        <rect key="frame" x="20" y="69" width="374" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="enF-DR-RVV" id="26t-iY-Kp6">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SoZ-uA-hEg" customClass="ValidatableField" customModule="TFManager">
+                                                    <rect key="frame" x="20" y="16" width="334" height="19"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SoZ-uA-hEg" firstAttribute="top" secondItem="26t-iY-Kp6" secondAttribute="top" constant="16" id="5La-hH-WwG"/>
+                                                <constraint firstItem="SoZ-uA-hEg" firstAttribute="leading" secondItem="26t-iY-Kp6" secondAttribute="leadingMargin" id="66F-lu-Jr7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SoZ-uA-hEg" secondAttribute="trailing" id="AcD-4A-Mhl"/>
+                                                <constraint firstAttribute="bottom" secondItem="SoZ-uA-hEg" secondAttribute="bottom" constant="16" id="qb4-f2-hVf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="c8i-i7-6jS">
+                                        <rect key="frame" x="20" y="120" width="374" height="51.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c8i-i7-6jS" id="bEt-4Y-8Rg">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KQq-eM-GG5">
+                                                    <rect key="frame" x="20" y="16" width="334" height="19.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KQq-eM-GG5" firstAttribute="leading" secondItem="bEt-4Y-8Rg" secondAttribute="leadingMargin" id="ArU-kr-fKu"/>
+                                                <constraint firstAttribute="bottom" secondItem="KQq-eM-GG5" secondAttribute="bottom" constant="16" id="BsL-de-ZNv"/>
+                                                <constraint firstItem="KQq-eM-GG5" firstAttribute="top" secondItem="bEt-4Y-8Rg" secondAttribute="top" constant="16" id="Rki-AX-9Pm"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KQq-eM-GG5" secondAttribute="trailing" id="s0N-hv-T7v"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Fc1-4O-EwG" id="9Mf-CK-9o5"/>
+                            <outlet property="delegate" destination="Fc1-4O-EwG" id="D4W-gm-JED"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Demo" id="PuK-1W-nEY"/>
+                    <connections>
+                        <outlet property="ageField" destination="KQq-eM-GG5" id="Cec-5u-ykA"/>
+                        <outlet property="mailField" destination="SoZ-uA-hEg" id="wDU-tN-F2j"/>
+                        <outlet property="nameField" destination="nlt-Mj-STy" id="BH7-pd-qLn"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0lO-Fu-TEJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1792.753623188406" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r9y-j2-pYK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="knh-5X-Ize" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rQZ-kH-cQ7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fc1-4O-EwG" kind="relationship" relationship="rootViewController" id="8te-wO-wbI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Rk-k8-kgy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882.60869565217399" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

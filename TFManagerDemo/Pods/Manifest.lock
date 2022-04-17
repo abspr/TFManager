@@ -1,0 +1,16 @@
+PODS:
+  - TFManager (1.0.0)
+
+DEPENDENCIES:
+  - TFManager (from `../`)
+
+EXTERNAL SOURCES:
+  TFManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TFManager: 55ad13b1da90fd1b20a0619141b78597a1aff028
+
+PODFILE CHECKSUM: e7b52e5382700e488554835ce8f8e75061a770d4
+
+COCOAPODS: 1.11.2
