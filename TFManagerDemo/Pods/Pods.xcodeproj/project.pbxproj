@@ -11,10 +11,10 @@
 		3BE6A74A55EED856490FC04B3EBE7D79 /* TFManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 783144D7FF8526824A8F0C0344187A30 /* TFManager-dummy.m */; };
 		99A0010E1EA47E10C4BA60B276858626 /* Pods-TFManagerDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BAB75F19DDF145D3916826DD31904B2F /* Pods-TFManagerDemo-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F728198398EE72E7D208D7EBC52D453B /* TFManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BB1782F0FD82901074E3C0BC896AB07 /* TFManager-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FEED888A280C1A13003CC779 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED8886280C1A13003CC779 /* Rules.swift */; };
+		FEED888A280C1A13003CC779 /* TextRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED8886280C1A13003CC779 /* TextRules.swift */; };
 		FEED888D280C1A13003CC779 /* ValidatableField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED8889280C1A13003CC779 /* ValidatableField.swift */; };
 		FEED8893280C42A8003CC779 /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED8892280C42A8003CC779 /* ValidationResult.swift */; };
-		FEED889A280C651D003CC779 /* RulesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED8898280C651D003CC779 /* RulesRepo.swift */; };
+		FEED889A280C651D003CC779 /* TextRulesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED8898280C651D003CC779 /* TextRulesRepo.swift */; };
 		FEED889B280C651D003CC779 /* Validatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED8899280C651D003CC779 /* Validatable.swift */; };
 		FEED889D280C6A94003CC779 /* TFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED889C280C6A94003CC779 /* TFManager.swift */; };
 /* End PBXBuildFile section */
@@ -49,10 +49,10 @@
 		EA0E5F5FE9090A11B99650864B7B5826 /* TFManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TFManager.debug.xcconfig; sourceTree = "<group>"; };
 		F04B090EC8CD990ECF6998F6EBFAE897 /* Pods-TFManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F9D7432D264BD371F5E6DC5DD81A061C /* Pods-TFManagerDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TFManagerDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FEED8886280C1A13003CC779 /* Rules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rules.swift; path = Sources/TFManager/Rules.swift; sourceTree = "<group>"; };
+		FEED8886280C1A13003CC779 /* TextRules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextRules.swift; path = Sources/TFManager/TextRules.swift; sourceTree = "<group>"; };
 		FEED8889280C1A13003CC779 /* ValidatableField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValidatableField.swift; path = Sources/TFManager/ValidatableField.swift; sourceTree = "<group>"; };
 		FEED8892280C42A8003CC779 /* ValidationResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValidationResult.swift; path = Sources/TFManager/ValidationResult.swift; sourceTree = "<group>"; };
-		FEED8898280C651D003CC779 /* RulesRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RulesRepo.swift; path = Sources/TFManager/RulesRepo.swift; sourceTree = "<group>"; };
+		FEED8898280C651D003CC779 /* TextRulesRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextRulesRepo.swift; path = Sources/TFManager/TextRulesRepo.swift; sourceTree = "<group>"; };
 		FEED8899280C651D003CC779 /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Validatable.swift; path = Sources/TFManager/Validatable.swift; sourceTree = "<group>"; };
 		FEED889C280C6A94003CC779 /* TFManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFManager.swift; path = Sources/TFManager/TFManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,8 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				FEED8889280C1A13003CC779 /* ValidatableField.swift */,
-				FEED8886280C1A13003CC779 /* Rules.swift */,
-				FEED8898280C651D003CC779 /* RulesRepo.swift */,
+				FEED8886280C1A13003CC779 /* TextRules.swift */,
+				FEED8898280C651D003CC779 /* TextRulesRepo.swift */,
 				FEED8899280C651D003CC779 /* Validatable.swift */,
 				FEED8892280C42A8003CC779 /* ValidationResult.swift */,
 				FEED889C280C6A94003CC779 /* TFManager.swift */,
@@ -291,10 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEED888A280C1A13003CC779 /* Rules.swift in Sources */,
+				FEED888A280C1A13003CC779 /* TextRules.swift in Sources */,
 				FEED888D280C1A13003CC779 /* ValidatableField.swift in Sources */,
 				FEED8893280C42A8003CC779 /* ValidationResult.swift in Sources */,
-				FEED889A280C651D003CC779 /* RulesRepo.swift in Sources */,
+				FEED889A280C651D003CC779 /* TextRulesRepo.swift in Sources */,
 				FEED889B280C651D003CC779 /* Validatable.swift in Sources */,
 				3BE6A74A55EED856490FC04B3EBE7D79 /* TFManager-dummy.m in Sources */,
 				FEED889D280C6A94003CC779 /* TFManager.swift in Sources */,

@@ -17,7 +17,7 @@ class ViewController: UITableViewController {
     
     @IBOutlet weak var mailField: ValidatableField! {
         didSet {
-            mailField.rulesRepo.add(RulesSet.mail)
+            mailField.rulesRepo.add(TextRulesSet.mail)
         }
     }
     
@@ -30,10 +30,23 @@ class ViewController: UITableViewController {
 
 }
 
-extension ViewController: FormDelegate {
+extension ViewController: TFManagerDelegate {
     
     func textDidChange(_ textField: UITextField, validationResult: ValidationResult?) {
+        print("change", textField.text)
         guard let validationResult = validationResult else { return }
         textField.textColor = validationResult.isValid ? .label : .systemRed
+    }
+    
+    func focusChanged(from textField: UITextField) {
+        print("from", textField.text)
+    }
+    
+    func focusChanged(to textField: UITextField) {
+        print("to", textField.text)
+    }
+    
+    func didEndEditing(_ manager: TFManager) {
+        print("end")
     }
 }

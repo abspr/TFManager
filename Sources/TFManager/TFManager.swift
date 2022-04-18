@@ -7,18 +7,27 @@
 
 import Foundation
 
-public protocol FormDelegate: AnyObject {
-    func formFocusChanged(from textField: UITextField)
-    func formFocusChanged(to textField: UITextField)
+/// Sets of methods you can use to notify how users are interacting with the textFields.
+public protocol TFManagerDelegate: AnyObject {
+    
+    /// to notify which `UITextField` was last responder.
+    func focusChanged(from textField: UITextField)
+    
+    /// to notify which `UITextField` became first responder.
+    func focusChanged(to textField: UITextField)
+    
+    /// Will call when text changed from a `UITextField` with its validation result.
     func textDidChange(_ textField: UITextField, validationResult: ValidationResult?)
-    func formDidEndEditing(_ manager: TFManager)
+    
+    /// Will call when no more `UITextField` is first responder.
+    func didEndEditing(_ manager: TFManager)
 }
 
-public extension FormDelegate {
-    func formFocusChanged(from textField: UITextField) { }
-    func formFocusChanged(to textField: UITextField) { }
+public extension TFManagerDelegate {
+    func focusChanged(from textField: UITextField) { }
+    func focusChanged(to textField: UITextField) { }
     func textDidChange(_ textField: UITextField, validationResult: ValidationResult?) { }
-    func formDidEndEditing(_ manager: TFManager) { }
+    func didEndEditing(_ manager: TFManager) { }
 }
 
 
@@ -26,8 +35,8 @@ public extension FormDelegate {
 open class TFManager: NSObject {
     
     
-    /// Methods related to textFields focus and their validation status.
-    public weak var delegate: FormDelegate?
+    /// Use this to get notified how users are interacting with the textFields
+    public weak var delegate: TFManagerDelegate?
     
     private var items: [UITextField] = []
     
@@ -35,7 +44,7 @@ open class TFManager: NSObject {
         let button = UIBarButtonItem()
         button.style = .plain
         button.target = self
-        button.action = #selector(goToPreviousField(_:))
+        button.action = #selector(goToPreviousField)
         if #available(iOS 13.0, *) {
             button.image = UIImage(systemName: "chevron.backward")
         } else {
@@ -53,12 +62,12 @@ open class TFManager: NSObject {
         } else {
             button.title = "Next"
         }
-        button.action = #selector(goToNextField(_:))
+        button.action = #selector(goToNextField)
         return button
     }()
     
     private lazy var doneButton: UIBarButtonItem = {
-        let button = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneAction(_:)))
+        let button = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneAction))
         return button
     }()
     
@@ -83,6 +92,7 @@ open class TFManager: NSObject {
             field.addTarget(self, action: #selector(fieldTextChanged(_:)), for: .editingChanged)
             field.addTarget(self, action: #selector(fieldBeginEditing(_:)), for: .editingDidBegin)
             field.addTarget(self, action: #selector(returnDidPress(_:)), for: .editingDidEndOnExit)
+            field.addTarget(self, action: #selector(fieldEndsEditing(_:)), for: .editingDidEnd)
             let isLastField = index == items.count - 1
             field.returnKeyType = isLastField ? .done : .next
         }
@@ -93,8 +103,8 @@ open class TFManager: NSObject {
     
     /// Adds array of textFields in order of their appearance.
     /// - Parameters:
-    ///   - fields:
-    ///   - includesBar:
+    ///   - fields: Array of `UITextFields` or `Validable` field.
+    ///   - includesBar: Whether keyboard should have accessory bar or not.
     open func add(_ fields: [UITextField], includesBar: Bool = true) {
         items = fields
         hasToolbar = includesBar
@@ -105,9 +115,9 @@ open class TFManager: NSObject {
     // MARK: - Actions
     
     @objc
-    private func goToNextField(_ textField: UITextField) {
-        guard let lastField = items.last,  textField != lastField else { return }
+    private func goToNextField() {
         guard let activeField = activeField else { return }
+        guard let lastField = items.last, activeField != lastField else { return }
         guard let activeFieldIndex = items.firstIndex(where: { $0 == activeField }) else { return }
         if items.indices.contains(activeFieldIndex + 1) {
             items[activeFieldIndex + 1].becomeFirstResponder()
@@ -115,9 +125,9 @@ open class TFManager: NSObject {
     }
     
     @objc
-    private func goToPreviousField(_ textField: UITextField) {
-        guard let firstField = items.first,  textField != firstField else { return }
+    private func goToPreviousField() {
         guard let activeField = activeField else { return }
+        guard let firstField = items.first,  activeField != firstField else { return }
         guard let activeFieldIndex = items.firstIndex(where: { $0 == activeField }) else { return }
         if items.indices.contains(activeFieldIndex - 1) {
             items[activeFieldIndex - 1].becomeFirstResponder()
@@ -125,9 +135,9 @@ open class TFManager: NSObject {
     }
     
     @objc
-    private func doneAction(_ textField: UITextField) {
+    private func doneAction() {
         activeField?.resignFirstResponder()
-        delegate?.formDidEndEditing(self)
+        delegate?.didEndEditing(self)
     }
     
     @objc
@@ -138,6 +148,7 @@ open class TFManager: NSObject {
     @objc
     private func fieldBeginEditing(_ textField: UITextField) {
         activeField = textField
+        delegate?.focusChanged(to: textField)
         guard hasToolbar else { return }
         activeField?.inputAccessoryView = toolbar
         nextButton.isEnabled = !(textField == items.last)
@@ -145,11 +156,16 @@ open class TFManager: NSObject {
     }
     
     @objc
+    private func fieldEndsEditing(_ textField: UITextField) {
+        delegate?.focusChanged(from: textField)
+    }
+    
+    @objc
     private func returnDidPress(_ textField: UITextField) {
         if textField == items.last {
-            doneAction(textField)
+            doneAction()
         } else {
-            goToNextField(textField)
+            goToNextField()
         }
     }
     

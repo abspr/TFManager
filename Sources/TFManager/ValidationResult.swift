@@ -7,7 +7,12 @@
 
 import Foundation
 
+/// Result object used in `Validatable` and `TFManager`
 public struct ValidationResult {
+    
+    /// Boolean determines whether validatoin did pass or not.
     public var isValid: Bool
+    
+    /// holds error message.
     public var message: String?
 }
