@@ -7,11 +7,23 @@
 
 import Foundation
 
+/// Adds validation to any object using `TextRulesSet` or any `TextRule`.
 public protocol Validatable: AnyObject {
-    var rulesRepo: RulesRepo { get set }
+    
+    /// Set `TextRulesRepo()` to it.
+    var rulesRepo: TextRulesRepo { get set }
+    
+    /// Return `text` that will be validated.
     var textToValidate: String? { get }
+    
+    /// Don't implement this unless you know what you're doing.
+    /// - Returns: Result of validation
     func validate() -> ValidationResult
-    func didFailToValidate(_ rule: Rule)
+    
+    /// Will call when validation fails. Implement this if you want adjust UI.
+    func didFailToValidate(_ rule: TextRule)
+    
+    /// Will call when validation pass. Implement this if you want adjust UI.
     func didPassValidation()
 }
 
@@ -31,6 +43,6 @@ public extension Validatable {
         return ValidationResult(isValid: true, message: nil)
     }
     
-    func didFailToValidate(_ rule: Rule) { }
+    func didFailToValidate(_ rule: TextRule) { }
     func didPassValidation() { }
 }
