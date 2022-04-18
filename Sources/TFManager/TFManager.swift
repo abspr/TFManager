@@ -5,7 +5,7 @@
 //  Created by Hosein Abbaspour on 4/17/22.
 //
 
-import Foundation
+import UIKit
 
 /// Sets of methods you can use to notify how users are interacting with the textFields.
 public protocol TFManagerDelegate: AnyObject {
