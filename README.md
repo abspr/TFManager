@@ -1,4 +1,6 @@
-https://github.com/abspr/TFManager/ScreenShots/demo.mp4
+<p float="center">
+  <img src="https://github.com/abspr/TFManager/ScreenShots/demo.gif" width="300" />
+</p>
 
 # TFManager
 
