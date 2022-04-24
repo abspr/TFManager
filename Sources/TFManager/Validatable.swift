@@ -20,29 +20,26 @@ public protocol Validatable: AnyObject {
     /// - Returns: Result of validation
     func validate() -> ValidationResult
     
-    /// Will call when validation fails. Implement this if you want adjust UI.
-    func didFailToValidate(_ rule: TextRule)
+    /// Will call when validation fails.
+    func validationDidFail(_ rule: TextRule)
     
-    /// Will call when validation pass. Implement this if you want adjust UI.
-    func didPassValidation()
+    /// Will call when validation pass.
+    func validationDidPass()
 }
 
 public extension Validatable {
     func validate() -> ValidationResult {
         if rulesRepo.ignoreNil && textToValidate?.isEmpty ?? true {
-            didPassValidation()
+            validationDidPass()
             return ValidationResult(isValid: true, message: nil)
         }
         for rule in rulesRepo.rules {
             if !rule.validate(textToValidate!) {
-                didFailToValidate(rule)
+                validationDidFail(rule)
                 return ValidationResult(isValid: false, message: rule.message)
             }
         }
-        didPassValidation()
+        validationDidPass()
         return ValidationResult(isValid: true, message: nil)
     }
-    
-    func didFailToValidate(_ rule: TextRule) { }
-    func didPassValidation() { }
 }

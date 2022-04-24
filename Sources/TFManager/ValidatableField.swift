@@ -23,5 +23,11 @@ open class ValidatableField: UITextField, Validatable {
     
     /// Returns `text` property of `UITextField`
     public var textToValidate: String? { text }
+    
+    /// Will call when validation pass. Override this if you want adjust the UI.
+    open func validationDidPass() { }
+    
+    /// Will call when validation fails. Override this if you want adjust the UI.
+    open func validationDidFail(_ rule: TextRule) { }
 
 }
