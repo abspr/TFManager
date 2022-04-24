@@ -1,5 +1,5 @@
 <p float="center">
-  <img src="https://github.com/abspr/TFManager/ScreenShots/demo.gif" width="300" />
+  <img src="https://github.com/abspr/TFManager/blob/main/ScreenShots/demo.gif" width="300" />
 </p>
 
 # TFManager
