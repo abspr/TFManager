@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4467FBC4BFD7879C607F2372 /* libPods-TFManagerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B17154B1F770548A212660 /* libPods-TFManagerDemo.a */; };
+		FEE3EC64281575F700869C74 /* CustomValidatableField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE3EC63281575F700869C74 /* CustomValidatableField.swift */; };
 		FEED8866280AC68B003CC779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED8865280AC68B003CC779 /* AppDelegate.swift */; };
 		FEED886A280AC68B003CC779 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEED8869280AC68B003CC779 /* ViewController.swift */; };
 		FEED886D280AC68B003CC779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEED886B280AC68B003CC779 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		65B12019D66E3DDA0B5D9DA9 /* Pods-TFManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFManagerDemo.debug.xcconfig"; path = "Target Support Files/Pods-TFManagerDemo/Pods-TFManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		90B17154B1F770548A212660 /* libPods-TFManagerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TFManagerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		933BA34010181A29A6C41E45 /* Pods-TFManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFManagerDemo.release.xcconfig"; path = "Target Support Files/Pods-TFManagerDemo/Pods-TFManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		FEE3EC63281575F700869C74 /* CustomValidatableField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomValidatableField.swift; sourceTree = "<group>"; };
 		FEED8862280AC68B003CC779 /* TFManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEED8865280AC68B003CC779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEED8869280AC68B003CC779 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				FEED8865280AC68B003CC779 /* AppDelegate.swift */,
 				FEED8869280AC68B003CC779 /* ViewController.swift */,
+				FEE3EC63281575F700869C74 /* CustomValidatableField.swift */,
 				FEED886B280AC68B003CC779 /* Main.storyboard */,
 				FEED886E280AC68C003CC779 /* Assets.xcassets */,
 				FEED8870280AC68C003CC779 /* LaunchScreen.storyboard */,
@@ -187,6 +190,7 @@
 			files = (
 				FEED886A280AC68B003CC779 /* ViewController.swift in Sources */,
 				FEED8866280AC68B003CC779 /* AppDelegate.swift in Sources */,
+				FEE3EC64281575F700869C74 /* CustomValidatableField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
