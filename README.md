@@ -1,4 +1,6 @@
-https://github.com/abspr/TFManager/ScreenShots/demo.mp4
+<p float="center">
+  <img src="https://github.com/abspr/TFManager/ScreenShots/demo.gif" width="300" />
+</p>
 
 # TFManager
 
@@ -65,7 +67,8 @@ fieldsManager.add([nameField, mailField, ageField])
 You can add rules to your `UITextField`s and ask `TFManager` to apply validation to all of child fields:
 
 1. Change your textField class to `ValidatableField`.
-[Change Field Subclass](https://github.com/abspr/TFManager/ScreenShots/screenShot1.png)
+<img src="https://github.com/abspr/TFManager/ScreenShots/screenShot1.png" />
+
 2. Then you can call `validate()` method on your `TFManager` instance.
 ```swift
 let result = fieldsManager.validate()
