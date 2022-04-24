@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TFManager'
-  s.version          = '1.0.1'
+  s.version          = '1.1.0'
   s.summary          = 'Add validations to your text fields, Group them together and navigate through them via return button and accessory view.'
   s.homepage         = 'https://github.com/abspr/TFManager'
   s.license          = { :type => 'MIT', :file => 'LICENSE.md' }
